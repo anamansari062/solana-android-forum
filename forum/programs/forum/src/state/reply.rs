@@ -14,7 +14,6 @@ const DISCRIMINATOR_LENGTH: usize = 8;
 const PUBLIC_KEY_LENGTH: usize = 32;
 const TIMESTAMP_LENGTH: usize = 8;
 const STRING_LENGTH_PREFIX: usize = 4;
-const CONTENT_LENGTH: usize = 4 * 30;
 const QUESTION_ID: usize = 4;
 const REPLY_ID: usize = 4;
 const BUMP_LENTH: usize = 1; 
@@ -27,7 +26,6 @@ impl Reply {
         + PUBLIC_KEY_LENGTH
         + TIMESTAMP_LENGTH
         + STRING_LENGTH_PREFIX
-        + CONTENT_LENGTH
         + QUESTION_ID
         + REPLY_ID;
 

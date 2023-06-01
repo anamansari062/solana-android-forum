@@ -3,11 +3,12 @@ use crate::state::{Question, ProgramInfo};
 use crate::errors::QuestionError;
 
 #[derive(Accounts)]
+#[instruction(content: String)]
 pub struct CreateQuestion<'info> {
     #[account(
         init, 
         payer = author, 
-        space = Question::LEN, 
+        space = Question::LEN + content.len(), 
         seeds = [b"question", program_info.question_count.to_be_bytes().as_ref()],
         bump
     )]

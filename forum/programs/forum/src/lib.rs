@@ -23,4 +23,12 @@ pub mod forum {
         instructions::create_reply(ctx, content)
     }
 
+    pub fn update_question(ctx: Context<UpdateQuestion>, content: String) -> Result<()> {
+        instructions::update_question(ctx, content)
+    }
+
+    pub fn update_reply(ctx: Context<UpdateReply>, content: String) -> Result<()> {
+        instructions::update_reply(ctx, content)
+    }
+
 }
